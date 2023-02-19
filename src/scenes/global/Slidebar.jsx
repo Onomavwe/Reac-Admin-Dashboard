@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { tokens } from '../../theme';
 import { Sidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
 import ContactsOutlinedIcon from "@mui/icons-material/ContactsOutlined";
@@ -27,8 +27,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
         color: colors.grey[100],
       }}
       onClick={() => setSelected(title)}
-      icon={icon}
-    >
+      icon={icon}>
       <Typography>{title}</Typography>
       <Link to={to} />
     </MenuItem>
@@ -111,7 +110,7 @@ const Slidebar = () => {
             <Typography variant="h6" color={colors.grey[300]} sx={{ m: "15px 0 5px 20px" }}>
               Data
             </Typography>
-            <Item title="Manage Team" Link to="/team" icon={<PeopleOutlinedIcon />} selected={selected} setSelected={setSelected} />
+            <Item title="Manage Team" to="/team" icon={<PeopleOutlinedIcon />} selected={selected} setSelected={setSelected} />
             <Item title="Contacts Information" to="/contacts" icon={<ContactsOutlinedIcon />} selected={selected} setSelected={setSelected} />
             <Item title="Invoices Balances" to="/invoices" icon={<ReceiptOutlinedIcon />} selected={selected} setSelected={setSelected} />
 
